@@ -41,6 +41,10 @@ To experience the Alien Bug Saga on your own, here are some links to dive into t
 - [Report Bug](https://github.com/dapandamonium/404Page/issues)
 - [Request Feature](https://github.com/dapandamonium/404Page/issues)
 
+---
+### Catch A Mole
+Credits to [Catch-A-Mole](https://leonidlebedev.github.io/css-games/catch-a-mole/)
+
 ## 🤝 Contributing
 
 I'm always on the lookout for feedback and contributions. Whether it's a bug fix, a feature suggestion, or just a high five on the concept, I'd love to hear from you!
