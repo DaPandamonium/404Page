@@ -51,33 +51,39 @@ a {
 
 
 @media screen and (max-width:600px) {
-    .container {
-        display: flex;
-        flex-direction: column-reverse;
+    .header-alien {
+        padding-top: 100px; /* Reduce padding for smaller screens */
+        font-size: 16px; /* Adjust font size */
     }
 
-    .text,
-    .image {
-        width: 100%;
+    .image-alien {
+        height: 300px; /* Adjust image size */
     }
 
-    .container {
-        min-width: 200px;
-        padding: 40px 0px;
+    .container, .nes-balloon, .background-img {
+        width: 90%; /* Use percentage-based widths for flexibility */
+        max-width: none; /* Override any max-width settings */
     }
 
-    .text {
-        display: block;
-        width: 100%;
-        padding: 20px 40px;
+    .nes-balloon, .background-img {
+        margin: 20px auto; /* Center and add some margin on smaller screens */
     }
 
-    .image {
-        display: flex;
-        width: 200px;
-        align-self: center;
-        justify-content: center;
-        margin: auto;
+    .nes-btn {
+        width: auto; /* Allow button to adjust its width */
+        font-size: 20px; /* Adjust font size for buttons */
+    }
+}
+
+/* Further improvements for even smaller screens */
+@media screen and (max-width:360px) {
+    .nes-balloon, .background-img {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .nes-btn {
+        padding: 10px; /* Adjust button padding */
+        font-size: 18px; /* Further adjust font size */
     }
 }
 
