@@ -32,16 +32,10 @@ a {
 }
 
 
-.header-alien {
-    padding-top: 350px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center !important; /* Update to center-align elements on mobile */
     align-items: center;
     flex-direction: column;
     column-gap: 20px;
@@ -49,41 +43,60 @@ a {
     margin-top: 0;
 }
 
-
 @media screen and (max-width:600px) {
-    .header-alien {
-        padding-top: 100px; /* Reduce padding for smaller screens */
-        font-size: 16px; /* Adjust font size */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align items in the center for small screens */
+        justify-content: center !important; /* Update the property to center-align elements */
     }
-
+    .text,
+    .image {
+        width: 100%;
+    }
+    .container {
+        min-width: 200px;
+        padding: 40px 0px;
+    }
+    .text {
+        display: block;
+        width: 100%;
+        padding: 20px 40px;
+    }
     .image-alien {
-        height: 300px; /* Adjust image size */
+        display: flex;
+        width: auto;
+        align-self: center;
+        justify-content: center;
+        margin: auto;
     }
 
-    .container, .nes-balloon, .background-img {
-        width: 90%; /* Use percentage-based widths for flexibility */
-        max-width: none; /* Override any max-width settings */
+    .nes-balloon {
+        width: 90%;
+        max-width: 90%;
+        font-size: 20px;
     }
 
-    .nes-balloon, .background-img {
-        margin: 20px auto; /* Center and add some margin on smaller screens */
-    }
-
-    .nes-btn {
-        width: auto; /* Allow button to adjust its width */
-        font-size: 20px; /* Adjust font size for buttons */
-    }
-}
-
-/* Further improvements for even smaller screens */
-@media screen and (max-width:360px) {
-    .nes-balloon, .background-img {
-        padding: 10px; /* Reduce padding */
+    .for-desktop {
+        font-size: 14px;
+        text-align: center;
     }
 
     .nes-btn {
-        padding: 10px; /* Adjust button padding */
-        font-size: 18px; /* Further adjust font size */
+        width: 80%;
+        border-width: 2px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+        border-width: 2px;
     }
 }
 
@@ -107,8 +120,8 @@ a {
     border-image-repeat: stretch !important;
     padding: 1rem 1.5rem;
     font-size: 1rem;
-    width: 900px;
-    max-width: 900px;
+    width: 90%;
+    max-width: 90%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     font-family: "VT323", monospace;
@@ -120,19 +133,16 @@ a {
     left: 20px;
 }
 
-
-
-
 .for-desktop {
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=), auto;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
-    font-family: Press Start\ 2P;
+    font-family: Press Start 2P;
     font-size: 16px;
     color: #212529;
     box-sizing: border-box;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -142,7 +152,6 @@ a {
     left: 20px;
     position: relative;
     z-index: 2;
-
 }
 
 .nes-btn {
@@ -190,12 +199,10 @@ button.nes-btn {
     padding-bottom: 20px;
 }
 
-
-
 .background-img {
     background-image: url("./assets/alien-bug1.png");
-    height: 400px;
-    width: 800px;
+    height: 400px; /* Adjust height for better mobile view */
+    width: 90%; /* Adjust width to be responsive */
     background-repeat: no-repeat;
     background-size: cover;
     margin: 5% auto;
@@ -204,12 +211,10 @@ button.nes-btn {
     border-radius: 4px;
     box-shadow: 0px 0px 5px #8d0303;
     position: relative;
-    
 }
 
 .content h2 {
-    font-size: 90px;
-    
+    font-size: 40px; /* Adjust font size for better mobile view */
 }
 
 .box {
@@ -219,7 +224,7 @@ button.nes-btn {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 300px;
+    height: 300px; /* Updated height to make it a square */
     background: #111845a6;
     box-sizing: border-box;
     overflow: hidden;
@@ -229,13 +234,14 @@ button.nes-btn {
     padding: 20px;
     font-family: "VT323", monospace;
     font-size: 24px;
-        justify-content: center;
+    justify-content: center;
     align-items: center;
     border-image-slice: 3;
     border-image-width: 3;
     border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
     border-image-outset: 2;
 }
+
 
 .box:before {
     content: '';
@@ -258,7 +264,6 @@ button.nes-btn {
     transform: skewX(-5deg);
 }
 
-
 .box .content {
     position: absolute;
     top: 15px;
@@ -273,7 +278,6 @@ button.nes-btn {
     border-image-width: 3;
     border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
     border-image-outset: 2;
-
 }
 
 .box span {
@@ -288,7 +292,6 @@ button.nes-btn {
     border-image-width: 3;
     border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
     border-image-outset: 2;
-
 }
 
 .box span:nth-child(1) {
@@ -342,10 +345,7 @@ button.nes-btn {
         transform-origin: right;
 
     }
-
-
 }
-
 
 
 .footer {
@@ -359,11 +359,12 @@ button.nes-btn {
     height: 100%;
     background-color: #D0DAEE;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .footer p {
+}
+
+.footer p {
     text-align: center;
   }
   
@@ -385,6 +386,4 @@ button.nes-btn {
     border: 4px solid white;
     display: unset;
     position: relative; /* Optional for user-avatar styling */
-    left: -285px; /* Optional for user-avatar styling */
-  }
-  
+}
